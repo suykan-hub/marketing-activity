@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100vh;
+}
+
+/* 覆盖Ant Design的默认border-radius样式 */
+:where(.css-dev-only-do-not-override-*) {
+  border-radius: 2px !important;
+}
+
+/* 更具体的选择器来确保覆盖所有Ant Design组件的圆角 */
+.ant-btn,
+.ant-input,
+.ant-select-selector,
+.ant-picker,
+.ant-cascader-picker,
+.ant-input-number,
+.ant-upload,
+.ant-card,
+.ant-modal-content,
+.ant-drawer-content,
+.ant-popover,
+.ant-tooltip,
+.ant-dropdown,
+.ant-menu,
+.ant-table,
+.ant-pagination,
+.ant-tabs,
+.ant-tag,
+.ant-badge,
+.ant-avatar,
+.ant-switch,
+.ant-checkbox,
+.ant-radio,
+.ant-slider,
+.ant-progress,
+.ant-alert,
+.ant-message,
+.ant-notification,
+.ant-spin,
+.ant-skeleton,
+.ant-empty,
+.ant-result,
+.ant-statistic,
+.ant-descriptions,
+.ant-list,
+.ant-timeline,
+.ant-collapse,
+.ant-panel,
+.ant-form-item,
+.ant-divider,
+.ant-space,
+.ant-row,
+.ant-col,
+.ant-layout,
+.ant-layout-header,
+.ant-layout-sider,
+.ant-layout-content,
+.ant-layout-footer {
+  border-radius: 2px !important;
+}
+
+/* 覆盖所有可能的圆角样式 */
+*[class*='ant-'] {
+  border-radius: 2px !important;
+}
