@@ -75,15 +75,6 @@ function App() {
           path: 'campaign-templates',
           element: (
             <PlaceholderPage
-              title="活动模板"
-              description="管理和使用活动模板"
-            />
-          ),
-        },
-        {
-          path: 'marquee',
-          element: <MarqueeActivity />,
-        },
         {
           path: 'marquee-demo',
           element: <MarqueeDemo />,
@@ -93,10 +84,12 @@ function App() {
           path: 'wheel',
           element: <WheelGame />,
         },
-        {
           path: 'marquee',
           element: <MarqueeActivity />,
         },
+    {
+      path: 'marquee-demo',
+    }
         {
           path: 'wheel',
           element: <WheelGame />,

@@ -7,6 +7,9 @@ import PerformanceAnalysis from '../pages/analytics/PerformanceAnalysis';
 import UserSegments from '../pages/audience/UserSegments';
 import PointsManagement from '../pages/rewards/PointsManagement';
 import ContestList from '../pages/competitions/ContestList';
+import MarqueeActivity from '../pages/marquee/MarqueeActivity';
+import MarqueeDemo from '../pages/marquee/MarqueeDemo';
+import WheelGame from '../pages/wheelPage/WheelGame';
 import PlaceholderPage from '../pages/PlaceholderPage';
 
 // 创建路由配置
@@ -35,6 +38,20 @@ export const router = createBrowserRouter([
         element: (
           <PlaceholderPage title="活动模板" description="管理和使用活动模板" />
         ),
+      },
+      // 跑马灯活动
+      {
+        path: 'marquee',
+        element: <MarqueeActivity />,
+      },
+      {
+        path: 'marquee-demo',
+        element: <MarqueeDemo />,
+      },
+      // 大转盘活动
+      {
+        path: 'wheel-game',
+        element: <WheelGame />,
       },
       // 数据分析
       {

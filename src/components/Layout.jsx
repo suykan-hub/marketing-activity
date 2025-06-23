@@ -62,8 +62,16 @@ const MarketingLayout = ({ isDarkMode, onThemeChange }) => {
           label: '创建活动',
         },
         {
-          key: '/campaign-templates',
-          label: '活动模板',
+          key: '/marquee',
+          label: '跑马灯活动',
+        },
+        {
+          key: '/marquee-demo',
+          label: '跑马灯演示',
+        },
+        {
+          key: '/wheel',
+          label: '大转盘游戏',
         },
       ],
     },
