@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import MarketingLayout from '../components/Layout';
+import ErrorBoundary from '../components/ErrorBoundary';
 import Dashboard from '../components/Dashboard';
 import CampaignList from '../pages/campaigns/CampaignList';
 import PerformanceAnalysis from '../pages/analytics/PerformanceAnalysis';
@@ -10,6 +11,9 @@ import ContestList from '../pages/competitions/ContestList';
 import MarqueeActivity from '../pages/marquee/MarqueeActivity';
 import MarqueeDemo from '../pages/marquee/MarqueeDemo';
 import WheelGame from '../pages/wheelPage/WheelGame';
+import NineGridLottery from '../pages/nineGrid/NineGridLottery';
+import NineGridDemo from '../pages/nineGrid/NineGridDemo';
+import TestPage from '../pages/nineGrid/test';
 import PlaceholderPage from '../pages/PlaceholderPage';
 
 // 创建路由配置
@@ -17,6 +21,7 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <MarketingLayout />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         index: true,
@@ -52,6 +57,19 @@ export const router = createBrowserRouter([
       {
         path: 'wheel-game',
         element: <WheelGame />,
+      },
+      // 九宫抽奖活动
+      {
+        path: 'nine-grid',
+        element: <NineGridLottery />,
+      },
+      {
+        path: 'nine-grid-demo',
+        element: <NineGridDemo />,
+      },
+      {
+        path: 'nine-grid-test',
+        element: <TestPage />,
       },
       // 数据分析
       {

@@ -70,8 +70,16 @@ const MarketingLayout = ({ isDarkMode, onThemeChange }) => {
           label: '跑马灯演示',
         },
         {
-          key: '/wheel',
+          key: '/wheel-game',
           label: '大转盘游戏',
+        },
+        {
+          key: '/nine-grid',
+          label: '九宫抽奖',
+        },
+        {
+          key: '/nine-grid-demo',
+          label: '九宫抽奖演示',
         },
       ],
     },

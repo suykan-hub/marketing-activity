@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ConfigProvider, theme } from 'antd';
+import { ConfigProvider, theme, App as AntdApp } from 'antd';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import zhCN from 'antd/locale/zh_CN';
 import MarketingLayout from './components/Layout';
@@ -12,7 +12,12 @@ import ContestList from './pages/competitions/ContestList';
 import MarqueeActivity from './pages/marquee/MarqueeActivity';
 import WheelGame from './pages/wheelPage/WheelGame';
 import MarqueeDemo from './pages/marquee/MarqueeDemo';
+import NineGridLottery from './pages/nineGrid/NineGridLottery';
+import NineGridDemo from './pages/nineGrid/NineGridDemo';
+import TestPage from './pages/nineGrid/test';
 import PlaceholderPage from './pages/PlaceholderPage';
+import Reports from './pages/reports';
+import Conversion from './pages/conversion';
 import 'antd/dist/reset.css';
 
 function App() {
@@ -90,19 +95,21 @@ function App() {
         },
         // 大转盘活动
         {
-          path: 'wheel',
+          path: 'wheel-game',
           element: <WheelGame />,
         },
+        // 九宫抽奖活动
         {
-          path: 'marquee',
-          element: <MarqueeActivity />,
+          path: 'nine-grid',
+          element: <NineGridLottery />,
         },
         {
-          path: 'wheel',
-          element: <WheelGame />,
+          path: 'nine-grid-demo',
+          element: <NineGridDemo />,
         },
         {
-          element: <MarqueeDemo />,
+          path: 'nine-grid-test',
+          element: <TestPage />,
         },
         // 数据分析
         {
@@ -111,21 +118,11 @@ function App() {
         },
         {
           path: 'conversion',
-          element: (
-            <PlaceholderPage
-              title="转化追踪"
-              description="追踪和分析用户转化路径"
-            />
-          ),
+          element: <Conversion />,
         },
         {
           path: 'reports',
-          element: (
-            <PlaceholderPage
-              title="数据报表"
-              description="生成和查看数据报表"
-            />
-          ),
+          element: <Reports />,
         },
         // 受众管理
         {
@@ -248,7 +245,9 @@ function App() {
 
   return (
     <ConfigProvider locale={zhCN} theme={themeConfig}>
-      <RouterProvider router={routerWithTheme} />
+      <AntdApp>
+        <RouterProvider router={routerWithTheme} />
+      </AntdApp>
     </ConfigProvider>
   );
 }
